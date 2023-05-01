@@ -1,6 +1,5 @@
 # data-structures and algorithms
-<img src="https://i.pinimg.com/564x/59/48/14/594814a77d80d63a57a42f2141341b73.jpg" alt="header" width="100%" height="200px">
-
+<img src="https://user-images.githubusercontent.com/55135926/235452889-db31d960-dbea-450d-9c2a-cbb303054efb.png" alt="header" width="100%" height="200px">
 
 
 ### Table of Contents
