@@ -19,3 +19,15 @@ var searchInsert = function(nums, target) {
     }
     return left;
 };
+
+/**
+nooooooo like this:
+
+n is the length of the nums array
+after 1st iteration, length = n/2
+after kth iteration = n/2^k
+
+when target is found: n / 2^k = 1
+=> 2^k = n
+=> k = log₂(n)
+**/
