@@ -24,7 +24,7 @@ function sumArray(arr) {
 }
 ```
 
-Rough guide to the time complexity of common algorithms based on the input size
+Rough guide to the time complexity of common algorithms based on the input size:
 
 | Input Size (n)   | Time Complexity           |
 |------------------|---------------------------|
