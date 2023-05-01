@@ -80,46 +80,39 @@ const reversedArray = sortedArray.reverse();
 const numbers = [1, 2, 3, 4, 5];
 
 // Using forEach() method
-console.log("Using forEach() method:");
 numbers.forEach((number) => {
   console.log(number);
 });
 
 // Using for...of loop
-console.log("\nUsing for...of loop:");
 for (const number of numbers) {
   console.log(number);
 }
 
 // Using for loop
-console.log("\nUsing for loop:");
 for (let i = 0; i < numbers.length; i++) {
   console.log(numbers[i]);
 }
 
 // Using map() method
-console.log("\nUsing map() method:");
 const doubledNumbers = numbers.map((number) => number * 2);
 console.log(doubledNumbers); // [ 2, 4, 6, 8, 10 ]
 
 // Using filter() method
-console.log("\nUsing filter() method:");
 const evenNumbers = numbers.filter((number) => number % 2 === 0);
 console.log(evenNumbers); // [ 2, 4 ]
 
 // Using reduce() method 
-console.log("\nUsing reduce() method:");
 const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue);
 console.log(sum); // 15
 
 // Using every() method
-console.log("\nUsing every() method:");
 const allEven = numbers.every((number) => number % 2 === 0);
 console.log(allEven); // false
 
 // Using some() method
-console.log("\nUsing some() method:");
 const someEven = numbers.some((number) => number % 2 === 0);
 console.log(someEven); // true
+
 
 ```
