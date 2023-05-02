@@ -7,6 +7,7 @@
 - [Time Complexity](#time-complexity)
 - [Arrays](#arrays)
 - [Array Traversal](#array-traversal)
+- [Binary Search Tree](#binary-search-tree)
 
 ### **TIME COMPLEXITY**
 
@@ -116,3 +117,179 @@ console.log(someEven); // true
 
 
 ```
+
+### **BINARY SEARCH TREE**
+
+* Creating a Binary Search Tree Node
+
+  ```js
+  class TreeNode {
+    constructor(val) {
+      this.val = val;
+      this.left = null;
+      this.right = null;
+    }
+  }
+
+  /* Inserting a node */
+  function insert(root, val) {
+    if (!root) {
+      return new TreeNode(val);
+    }
+
+    if (val < root.val) {
+      root.left = insert(root.left, val);
+    } else {
+      root.right = insert(root.right, val);
+    }
+
+    return root;
+  }
+
+  /* Example */
+  const root = new TreeNode(5);
+  insert(root, 3);
+  insert(root, 8);
+  insert(root, 1);
+  insert(root, 4);
+
+  // The resulting tree should look like:
+  //      5
+  //     / \
+  //    3   8
+  //   / \
+  //  1   4
+
+
+  ```
+* Searching for a node
+
+  ```js
+  function search(root, val) {
+    if (!root || root.val === val) {
+      return root;
+    }
+
+    if (val < root.val) {
+      return search(root.left, val);
+    } else {
+      return search(root.right, val);
+    }
+  }
+
+  /* Example */
+
+  const root = new TreeNode(5);
+  insert(root, 3);
+  insert(root, 8);
+  insert(root, 1);
+  insert(root, 4);
+
+  const node = search(root, 4); // returns the node with value 4
+
+  ```
+* Traversing the Tree
+
+  ```js
+  /* In-order Traversal */
+  function inOrder(root) {
+    if (!root) {
+      return;
+    }
+
+    inOrder(root.left);
+    console.log(root.val);
+    inOrder(root.right);
+  }
+
+  /* Example */
+  const root = new TreeNode(5);
+  insert(root, 3);
+  insert(root, 8);
+  insert(root, 1);
+  insert(root, 4);
+
+  inOrder(root); // logs 1, 3, 4, 5, 8
+
+
+  ```
+
+  ```js
+  /* Pre-order Traversal */
+  function preOrder(root) {
+    if (!root) {
+      return;
+    }
+
+    console.log(root.val);
+    preOrder(root.left);
+    preOrder(root.right);
+  }
+
+  /* Example */
+  const root = new TreeNode(5);
+  insert(root, 3);
+  insert(root, 8);
+  insert(root, 1);
+  insert(root, 4);
+
+  preOrder(root); // logs 5, 3, 1, 4, 8
+
+  ```
+
+  ```js
+  /* Post Order Traversal */
+  function postOrder(root) {
+    if (!root) {
+      return;
+    }
+
+    postOrder(root.left);
+    postOrder(root.right);
+    console.log(root.val);
+  }
+
+  /* Example */
+
+  const root = new TreeNode(5);
+  insert(root, 3);
+  insert(root, 8);
+  insert(root, 1);
+  insert(root, 4);
+
+  postOrder(root); // logs 1, 4, 3, 8, 5
+
+  ```
+* Deletion
+
+  ```js
+  /**
+   * Deletes a value from the binary search tree
+   * @param {TreeNode} root - Root of the binary search tree
+   * @param {number} val - Value to be deleted
+   * @return {TreeNode} - Root of the modified binary search tree
+   */
+  function deleteNode(root, val) {
+    if (!root) return root;
+    if (val < root.val) root.left = deleteNode(root.left, val);
+    else if (val > root.val) root.right = deleteNode(root.right, val);
+    else {
+      if (!root.left && !root.right) root = null;
+      else if (!root.left || !root.right) root = root.left || root.right;
+      else {
+        let temp = root.right;
+        while (temp.left) temp = temp.left;
+        root.val = temp.val;
+        root.right = deleteNode(root.right, temp.val);
+      }
+    }
+    return root;
+  }
+
+  /* Example */
+  const root = new TreeNode(4);
+  root.left = new TreeNode(2);
+  root.right = new TreeNode(6);
+  console.log(deleteNode(root, 6)); // Output: TreeNode{val: 4, left: TreeNode{val: 2, left: null, right: null}, right: TreeNode{val: 7, left:
+
+  ```
