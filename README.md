@@ -7,6 +7,7 @@
 - [Time Complexity](#time-complexity)
 - [Arrays](#arrays)
 - [Array Traversal](#array-traversal)
+- [Strings](#strings)
 - [Binary Search Tree](#binary-search-tree)
 
 ### **TIME COMPLEXITY**
@@ -118,6 +119,40 @@ console.log(someEven); // true
 
 ```
 
+### **STRINGS**
+
+```js
+// Create a string using string literal notation or the `String()` constructor:
+const myString = 'Hello, world!';
+const newString = new String('Hello, world!');
+
+// Access individual characters of a string using their index:
+const secondCharacter = myString[1];
+console.log(secondCharacter); // Output: 'e'
+
+// Find the length of a string using the `length` property:
+const stringLength = myString.length;
+
+// Extract a substring from a string using `substring()`:
+const substring = myString.substring(0, 5); // Output: 'Hello'
+
+// Replace all occurrences of a substring in a string using `replace()`:
+const replacedString = myString.replace('world', 'friend'); // Output: 'Hello, friend!'
+
+// Convert a string to lowercase using `toLowerCase()`:
+const lowercaseString = myString.toLowerCase(); // Output: 'hello, world!'
+
+// Convert a string to uppercase using `toUpperCase()`:
+const uppercaseString = myString.toUpperCase(); // Output: 'HELLO, WORLD!'
+
+// Split a string into an array of substrings using `split()`:
+const splitString = myString.split(','); // Output: ['Hello', ' world!']
+
+// Trim leading and trailing whitespace from a string using `trim()`:
+const trimmedString = '   Hello, world!   '.trim(); // Output: 'Hello, world!'
+
+```
+
 ### **BINARY SEARCH TREE**
 
 * Creating a Binary Search Tree Node
@@ -213,7 +248,6 @@ console.log(someEven); // true
 
 
   ```
-
   ```js
   /* Pre-order Traversal */
   function preOrder(root) {
@@ -236,7 +270,6 @@ console.log(someEven); // true
   preOrder(root); // logs 5, 3, 1, 4, 8
 
   ```
-
   ```js
   /* Post Order Traversal */
   function postOrder(root) {
