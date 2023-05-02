@@ -126,6 +126,9 @@ console.log(someEven); // true
 const myString = 'Hello, world!';
 const newString = new String('Hello, world!');
 
+const index = myString.indexOf('world');
+console.log(index); // Output: 7
+
 // Access individual characters of a string using their index:
 const secondCharacter = myString[1];
 console.log(secondCharacter); // Output: 'e'
