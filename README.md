@@ -7,6 +7,7 @@
 - [Time Complexity](#time-complexity)
 - [Arrays](#arrays)
 - [Array Traversal](#array-traversal)
+- [Destructuring](#destructuring)
 - [Strings](#strings)
 - [String Conversion](#string-conversion)
 - [Binary Search Tree](#binary-search-tree)
