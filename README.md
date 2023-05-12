@@ -8,6 +8,7 @@
 - [Arrays](#arrays)
 - [Array Traversal](#array-traversal)
 - [Strings](#strings)
+- [String Conversion](#string-conversion)
 - [Binary Search Tree](#binary-search-tree)
 
 ### **TIME COMPLEXITY**
@@ -151,9 +152,49 @@ const uppercaseString = myString.toUpperCase(); // Output: 'HELLO, WORLD!'
 // Split a string into an array of substrings using `split()`:
 const splitString = myString.split(','); // Output: ['Hello', ' world!']
 
+// Join an array of substrings into a single string using `join()`:
+const joinedString = splitString.join(' '); // Output: 'Hello world!'
+
+// Reverse the order of the characters in a string using `reverse()`:
+const reversedString = myString.split('').reverse().join(''); // Output: '!dlrow ,olleH'
+
+
 // Trim leading and trailing whitespace from a string using `trim()`:
 const trimmedString = '   Hello, world!   '.trim(); // Output: 'Hello, world!'
 
+```
+
+### **STRING CONVERSION**
+
+```js
+// String to Number:
+const strNum = '42';
+const num = Number(strNum);
+console.log(num); // Output: 42
+
+const strInt = '42';
+const int = parseInt(strInt);
+console.log(int); // Output: 42
+
+const strFloat = '3.14';
+const float = parseFloat(strFloat);
+console.log(float); // Output: 3.14
+
+const strBigInt = '12345678901234567890';
+const bigInt = BigInt(strBigInt);
+console.log(bigInt); // Output: 12345678901234567890n
+
+// Number to String:
+const numStr = 42;
+const str1 = numStr.toString();
+console.log(str1); // Output: '42'
+
+const str2 = String(numStr);
+console.log(str2); // Output: '42'
+
+const pi = 3.14159;
+const strPi = pi.toFixed(2);
+console.log(strPi); // Output: '3.14'
 ```
 
 ### **BINARY SEARCH TREE**
