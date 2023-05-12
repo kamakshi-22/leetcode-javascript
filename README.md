@@ -42,40 +42,62 @@ Rough guide to the time complexity of common algorithms based on the input size:
 ### **ARRAYS**
 
 ```javascript
-// Create an array using array literal notation or the `Array()` constructor:
-const myArray = [1, 2, 3];
-const newArray = new Array(1, 2, 3);
+// Create an array using array literal notation or the Array() constructor:
+const myArray = [1, 2, 3]; // myArray is [1, 2, 3]
+const newArray = new Array(1, 2, 3); // newArray is [1, 2, 3]
+const newArray2 = new Array()3).fill(0); // newArray2 is [0, 0, 0]
 
 // Access individual elements of an array using their index:
-const secondElement = myArray[1];
+const secondElement = myArray[1]; // secondElement is 2
 console.log(secondElement); // Output: 2
 
-// Add elements to the end of an array using `push()`:
-myArray.push(4, 5);
+// Add elements to the end of an array using push():
+myArray.push(4, 5); // myArray is [1, 2, 3, 4, 5]
 
-// Remove the last element of an array using `pop()`:
-const lastElement = myArray.pop();
+// Remove the last element of an array using pop():
+const lastElement = myArray.pop(); // lastElement is 5
+// myArray is [1, 2, 3, 4]
 
-// Add elements to the beginning of an array using `unshift()`:
-myArray.unshift(0);
+// Add elements to the beginning of an array using unshift():
+myArray.unshift(0); // myArray is [0, 1, 2, 3, 4]
 
-// Remove the first element of an array using `shift()`:
-const firstElement = myArray.shift();
+// Remove the first element of an array using shift():
+const firstElement = myArray.shift(); // firstElement is 0
+// myArray is [1, 2, 3, 4]
 
-// Concatenate two or more arrays using `concat()`:
+// Concatenate two or more arrays using concat():
 const array1 = [1, 2];
 const array2 = [3, 4];
-const concatenatedArray = array1.concat(array2);
+const concatenatedArray = array1.concat(array2); // concatenatedArray is [1, 2, 3, 4]
 
-// Slice a portion of an array using `slice()`:
-const slicedArray = concatenatedArray.slice(1, 3);
+// Slice a portion of an array using slice():
+const slicedArray = concatenatedArray.slice(1, 3); // slicedArray is [2, 3]
 
-// Sort an array using `sort()`:
+// Sort an array using sort():
 const unsortedArray = [3, 1, 4, 1, 5, 9];
-const sortedArray = unsortedArray.sort();
+const sortedArray = unsortedArray.sort(); // sortedArray is [1, 1, 3, 4, 5, 9]
 
-// Reverse the order of an array using `reverse()`:
-const reversedArray = sortedArray.reverse();
+// Reverse the order of an array using reverse():
+const reversedArray = sortedArray.reverse(); // reversedArray is [9, 5, 4, 3, 1, 1]
+
+/* SPLICE */
+
+array.splice(index, howmany, item1, ....., itemX)
+
+const myArray = [1, 2, 3];
+
+// Add elements to an array using `splice()`:
+myArray.splice(1, 0, 4, 5); // Inserts 4 and 5 at index 1
+console.log(myArray); // Output: [1, 4, 5, 2, 3]
+
+// Remove elements from an array using `splice()`:
+myArray.splice(3, 1); // Removes the element at index 3
+console.log(myArray); // Output: [1, 4, 5, 3]
+
+// Replace elements in an array using `splice()`:
+myArray.splice(2, 1, 'a', 'b', 'c'); // Replaces the element at index 2 with 'a', 'b', and 'c'
+console.log(myArray); // Output: [1, 4, 'a', 'b', 'c', 3]
+
 ```
 
 ### **ARRAY TRAVERSAL**
@@ -118,6 +140,10 @@ console.log(allEven); // false
 const someEven = numbers.some((number) => number % 2 === 0);
 console.log(someEven); // true
 
+// Using findIndex() method
+const evenIndex = numbers.findIndex((number) => number % 2 === 0);
+console.log(evenIndex); // 1
+
 
 ```
 
@@ -156,6 +182,8 @@ console.log(index); // Output: 7
 // Access individual characters of a string using their index:
 const secondCharacter = myString[1];
 console.log(secondCharacter); // Output: 'e'
+const firstCharacter = myString.charAt(0); // Output: 'H'
+const fifthCharacter = myString.charAt(4); // Output: 'o'
 
 // Find the length of a string using the `length` property:
 const stringLength = myString.length;
@@ -181,7 +209,6 @@ const joinedString = splitString.join(' '); // Output: 'Hello world!'
 // Reverse the order of the characters in a string using `reverse()`:
 const reversedString = myString.split('').reverse().join(''); // Output: '!dlrow ,olleH'
 
-
 // Trim leading and trailing whitespace from a string using `trim()`:
 const trimmedString = '   Hello, world!   '.trim(); // Output: 'Hello, world!'
 
@@ -194,6 +221,8 @@ const trimmedString = '   Hello, world!   '.trim(); // Output: 'Hello, world!'
 const strNum = '42';
 const num = Number(strNum);
 console.log(num); // Output: 42
+const text = String.fromCharCode(72, 69, 76, 76, 79);
+console.log(text); // Output: HELLO
 
 const strInt = '42';
 const int = parseInt(strInt);
