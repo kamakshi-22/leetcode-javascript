@@ -197,6 +197,50 @@ const strPi = pi.toFixed(2);
 console.log(strPi); // Output: '3.14'
 ```
 
+### **OBJECTS**
+
+```js
+// Create an object using object literal notation or the Object() constructor:
+const myObject = { name: "John", age: 30 };
+const newObject = new Object({ name: "Jane", age: 25 });
+
+// Access properties of an object using dot notation or bracket notation:
+const objectName = myObject.name;
+const objectAge = myObject["age"];
+
+// Add a new property to an object:
+myObject.city = "New York";
+
+// Remove a property from an object using delete:
+delete myObject.age;
+
+// Check if an object has a property using the hasOwnProperty() method:
+const hasProperty = myObject.hasOwnProperty("name");
+
+// Get an array of all property names of an object using Object.keys():
+const propertyNames = Object.keys(myObject);
+
+// Get an array of all property values of an object using Object.values():
+const propertyValues = Object.values(myObject);
+
+// Check if a value exists in an object using Object.values() and includes():
+const myObject = {key1: "value1", key2: "value2"};
+if (Object.values(myObject).includes("value3")) {
+console.log("Value exists");
+}
+
+// Merge two or more objects using Object.assign():
+const object1 = { name: "John", age: 30 };
+const object2 = { city: "New York" };
+const mergedObject = Object.assign(object1, object2);
+
+// Clone an object using Object.assign() with an empty object:
+const clonedObject = Object.assign({}, myObject);
+
+// Freeze an object to prevent changes using Object.freeze():
+Object.freeze(myObject);
+```
+
 ### **BINARY SEARCH TREE**
 
 * Creating a Binary Search Tree Node

@@ -11,3 +11,11 @@ var titleToNumber = function(columnTitle) {
     }
     return result;
 };
+
+// Example:
+// columnTitle = "ZY"
+
+// i = 1, charCode = 25 (ASCII val of 'Y' - 64), position = 0, result = 25 * 26^0 = 25
+// i = 0, charCode = 26 (ASCII val of 'Z' - 64), position = 1, result = 25 + 26 * 26^1 = 701
+
+// Hence, the output should be 701.
