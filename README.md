@@ -120,6 +120,28 @@ console.log(someEven); // true
 
 ```
 
+### **DESTRUCTURING** 
+
+* Destructuring allows extracting data from arrays and objects and assign them to variables in a single step.
+
+  ```js
+  const array = [1, 2, 3];
+
+  //destructuring to extract the values of the first two elements into separate variables like this:
+  const [a, b] = array;
+  console.log(a); // Output: 1
+  console.log(b); // Output: 2
+
+  //Similarly, we can use destructuring to swap the values of two variables without using a temporary variable:
+  let a = 1;
+  let b = 2;
+  [a, b] = [b, a];
+  console.log(a); // Output: 2
+  console.log(b); // Output: 1
+
+
+  ```
+
 ### **STRINGS**
 
 ```js
